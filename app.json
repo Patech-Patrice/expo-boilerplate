@@ -1,17 +1,17 @@
 {
   "expo": {
-    "name": "Vivify Boilerplate",
-    "description": "A very interesting project.",
-    "slug": "development",
-    "privacy": "public",
+    "name": "Marilyn's Secret",
+    "description": "Anonymous Women's Only Social Network.",
+    "slug": "marilynssecret",
+    "privacy": "unlisted",
     "sdkVersion": "35.0.0",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/SquareIconlogo.png",
     "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/images/LaunchScreenLipLogo.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -19,15 +19,23 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.marilynssecret.marilynssecret"
+    },
+    "android": {
+      "package": "com.marilynssecret.marilynssecret"
+    },
+    "androidStatusBarColor": "#2c4470",
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#2c4470"
     },
     "hooks": {
       "postPublish": [
         {
-          "file": "sentry-expo/upload-sourcemaps",
           "config": {
-            "organization": "your team short name here",
-            "project": "your project short name here",
+            "organization": "Marilyn's Secret",
+            "project": "MS Frontend",
             "authToken": "your auth token here"
           }
         }

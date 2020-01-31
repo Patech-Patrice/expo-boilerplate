@@ -6,9 +6,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import $t from 'i18n';
 
 import {
-  login,
-  facebookLogin,
-  googleLogin
+  login
+  //facebookLogin,
+  //googleLogin
 } from '../../store/actions/UserActions';
 import { SignInForm } from '../../components/auth/SignInForm';
 import { signInErrorSelector } from '../../store/selectors/ErrorSelector';
@@ -17,8 +17,8 @@ const SignInScreen = ({ navigation }) => {
   const dispatch = useDispatch();
 
   const handleLogin = useCallback(data => dispatch(login(data)));
-  const handleFacebookLogin = data => dispatch(facebookLogin(data));
-  const handleGoogleLogin = data => dispatch(googleLogin(data));
+  //const handleFacebookLogin = data => dispatch(facebookLogin(data));
+  //const handleGoogleLogin = data => dispatch(googleLogin(data));
 
   const signInError = useSelector(signInErrorSelector());
 
@@ -35,9 +35,7 @@ const SignInScreen = ({ navigation }) => {
       <KeyboardAwareScrollView enableOnAndroid>
         <SignInForm onSubmit={handleLogin} signInError={signInError} />
 
-        <Button title="Sign in with Facebook!" onPress={handleFacebookLogin} />
-        <Button title="Sign in with Google!" onPress={handleGoogleLogin} />
-        <Button title="Sign up!" onPress={goToSignUp} />
+        <Button title="Sign up" onPress={goToSignUp} />
         <Button title="Forgot password" onPress={goToForgotPassword} />
       </KeyboardAwareScrollView>
     </View>
@@ -56,7 +54,7 @@ export default SignInScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FF387E',
     flex: 1
   }
 });
