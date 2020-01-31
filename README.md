@@ -87,3 +87,4 @@ As for **_android_**, you have `package` which is same as `bundleIdentifier` on 
 ```
 
 More about `app.json` configuration can be found [here](https://docs.expo.io/versions/latest/workflow/configuration/).
+# marilyns_secret_frontend
